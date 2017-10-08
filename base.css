@@ -40,6 +40,9 @@ body {
     background-color:rgba(0,0,0,0.4);
     -webkit-border-radius:10px;
 }
+.section {
+	height: 100%;
+}
 .section .page {
 	height: 100%;
 }

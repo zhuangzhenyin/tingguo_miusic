@@ -40,6 +40,9 @@ body {
     background-color:rgba(0,0,0,0.4);
     -webkit-border-radius:10px;
 }
+.section .page {
+	height: 100%;
+}
 /*工具箱*/
 .clearfixed:after,.clearfixed:before {
 	content: " ";

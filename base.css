@@ -1,0 +1,671 @@
+/*复位样式*/
+body, a, textarea, input { font-family:SourceHanSans,Microsoft YaHei,"瀹嬩綋", Verdana, Geneva, sans-serif; color: #333; }
+html, body,div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6, th, td, hr, blockquote { padding: 0; margin: 0; }
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/*公共样式*/
+.main h1 {
+	font-size: 30px;
+}
+.main h3 {
+	font-size: 26px;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+body {
+	overflow-x: hidden;
+	transition: all 1s;
+}
+::-webkit-scrollbar-track-piece{
+    background-color:transparent;/*婊氬姩鏉＄殑鑳屾櫙棰滆壊*/
+    -webkit-border-radius:0;/*婊氬姩鏉＄殑鍦嗚瀹藉害*/
+}
+::-webkit-scrollbar{
+    width:6px;/*婊氬姩鏉＄殑瀹藉害*/
+    height:6px;/*婊氬姩鏉＄殑楂樺害*/
+}
+::-webkit-scrollbar-thumb{/*鍨傜洿婊氬姩鏉＄殑鏍峰紡*/
+    height:6px;
+    background-color:rgba(0,0,0,0.2);
+    -webkit-border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover{/*婊氬姩鏉＄殑hover鏍峰紡*/
+    height:6px;
+    background-color:rgba(0,0,0,0.4);
+    -webkit-border-radius:10px;
+}
+/*工具箱*/
+.clearfixed:after,.clearfixed:before {
+	content: " ";
+	clear: both;
+}
+
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+/*基本样式*/
+.nav {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 999999;
+}
+.nav .container ul {
+	margin-top: 40px;
+	position: relative;
+}
+.nav .container ul:after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 35px;
+	background: #fff;
+	position: absolute;
+	bottom: -5px;
+	left: 20px;
+}
+.nav .container ul li {
+	width: 100px;
+}
+.nav .container img {
+	width: 108px;
+	height: 60px;
+}
+.nav .container ul li {
+	width: 72px;
+	text-align: center;
+}
+.nav .container ul li a {
+	font-size: 18px;
+	font-family: "宋体";
+	color: #fff;
+}
+
+/*page01*/
+.page01 {
+	min-height: 600px;
+	width: 100%;
+	background: #657faf;
+	position: relative;
+}
+.page01 .container .left {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 40%;
+	left: 12%;
+	text-align: center;
+	color: #F4E070;
+	font-size: 18px;
+	opacity: 0;
+}
+/*第一屏的动画 动画的控制要单独写在current中*/
+.current .page01 .container .left {
+	animation: left 1s ease-out both;
+}
+.page01 .container .left img {
+	width: 70px;
+	height: 70px;
+}
+.page01 .container .right {
+	width: 530px;
+	height: 530px;
+	background: url("images/p1.png");
+	position: absolute;
+	top: 5%;
+	right: 26%;
+}
+
+.page01 .container .right .p1-3 {
+	position: absolute;
+	left: 41px;
+	top: 105px;
+	animation: p1-3 2s linear infinite;
+}
+.page01 .container .right .p1-6{
+	width: 100px;
+	top: 99px;
+	position: absolute;
+	left: 141px;
+	overflow: hidden;
+}
+.page01 .container .right .p1-6 img{
+	animation: p1-6 5s linear infinite;
+}
+.page01 .container .right .p1-5{
+	position: absolute;
+	left: 77px;
+	top: 38px;
+	animation: p1-5 11s cubic-bezier(0.42, 0.25, 0.35, 0.98) both infinite;
+	width: 22px;
+	height: 21px;
+	background: url("images/p1-5.png") no-repeat;
+	overflow: hidden;
+}
+.page01 .container .right .p1-4{
+	position: absolute;
+	left: 155px;
+	top: 12px;
+	animation: p1-4 11s linear both infinite;
+	width: 11px;
+	height: 18px;
+	background: url("images/p1-4.png") no-repeat;
+	overflow: hidden;
+}
+.p1-7-wrap {
+	animation: p1-7-wrap 11s linear infinite;
+}
+
+.p1-7 {
+	position: absolute;
+	width: 32px;
+	height: 51px;
+	background: url("images/p1-7.png");
+	top: 76px;
+	left: 145px;
+	animation: p1-7 1.5s step-start infinite;
+}
+.p1-1 {
+	position: absolute;
+	top: 191px;
+	left: 100px;
+	animation: p1-1 2s linear infinite;
+}
+.p1-2 {
+	position: absolute;
+	top: 80px;
+	left: 20px;
+}
+.p1-11 {
+	position: absolute;
+	top: 68px;
+	left: 144px;
+}
+.p2-1 {
+	position: absolute;
+	top: 15px;
+	left: 270px;
+	animation: p2-1 10s linear infinite;
+}
+.p2-2 {
+	position: absolute;
+	top: 15px;
+	left: 230px;
+	animation: p2-2 10s linear infinite;
+}
+.p2-5 {
+	position: absolute;
+	top: 135px;
+	left: 450px;
+	animation: p2-5 2s linear infinite;
+} 
+.p2_3 {
+	position: absolute;
+	top: 73px;
+    left: 306px;
+}
+.p2_3 ul li {
+	width: 58px;
+	height: 24px;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	/*background: url("images/p2-4.png");*/
+	color: #fff;
+	font-size: 14px;
+}
+.p2_3 ul li+li {
+	background: url("images/p2-4.png") no-repeat;
+	animation: p2-3 10s linear both 3s;
+}
+.p2_3 ul li:nth-child(3n) {
+	background: url("images/p2-4.png") no-repeat;
+	animation: p2-3 10s linear both;
+}
+.p2_3 ul li:nth-child(4n) {
+	background: url("images/p2-4.png") no-repeat;
+	animation: p2-3 10s linear both 1s;
+}
+.p2_3 ul li:nth-child(5n) {
+	background: url("images/p2-4.png") no-repeat;
+	animation: p2-3 10s linear both 2s;
+}
+.p2_3 ul li:nth-child(7n) {
+	background: url("images/p2-4.png") no-repeat;
+}
+.p2_3 ul li:first-child {
+	background: url("images/p2-3.png") no-repeat;
+	animation: p2-3 10s linear both 1s;
+}
+.p2_3 ul li:nth-child(9) {
+	background-position-y: 25px;
+}
+.p2_3 ul li:nth-child(12) {
+	background-position-y: 25px;
+}
+.p3-1 {
+	position: absolute;
+	top: 283px;
+	animation: p3-1 3s linear infinite;
+}
+.p3-2 {
+	position: absolute;
+	top: 283px;
+	animation: p3-2 3s linear infinite;
+}
+.p2-1.min {
+	top: 320px;
+	left: 50px;
+	width: 30px;
+}
+.p2-1.min+.p2-1.min {
+	top: 290px;
+	left: 150px;
+	width: 30px;
+}
+.p2-1.min img {
+	width: 100%;
+}
+.p3-8 {
+	position: absolute;
+	width: 200px;
+	top: 353px;
+	left: 20px;
+}
+/*.p3-8 img {
+	width: 100%;
+}*/
+/*page02*/
+.page02 {
+	width: 100%;
+	min-height: 600px;
+	background-color: #F8707B;
+	position: relative;
+}
+.page02 .page02-left {
+	position: absolute;
+	top: 170px;
+	left: 210px;
+}
+.page02 .page02-left .title {
+	width: 72px;
+	height: 73px;
+	background: url("images/title_bg.png") no-repeat;
+	text-align: center;
+	opacity: 0;
+}
+.current .page02 .page02-left .title {
+	opacity: 1;
+	animation: page02_title 1s linear both;
+}
+.page02 .page02-left .current {
+	opacity: 0;
+
+}
+.current .page02 .page02-left .current {
+	opacity: 1;
+	animation: page02_h1 1s linear both; 
+}
+.page02 .page02-left .title span {
+	color: #F8707B;
+	font-size: 50px;
+	font-weight: 100;
+}
+.page02 .page02-left h1 {
+	height: 73px;
+	display: inline-block;
+	color: #fff;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page02 .page02-left h1 {
+	opacity: 1;
+	animation: page02_h1 1s linear both; 
+}
+.page02 .page02-left .line {
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	clear: both;
+	opacity: 0;
+}
+.current .page02 .page02-left .line {
+	opacity: 1;
+	animation: page02_line 1s linear both;
+}
+.page02 .page02-left h3 {
+	font-size: 26px;
+	color: #fff;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page02 .page02-left h3 {
+	opacity: 1;
+	animation: page02_h3 1s linear both;	
+}
+.page02 .page02-left .text {
+	margin-top: 70px;
+	opacity: 0;
+}
+.current .page02 .page02-left .text {
+	opacity: 1;
+	animation: page02_text 1s linear both;
+}
+.page02 .page02-left .text p {
+	color: #D8EBB1;
+	font-weight: lighter;
+	font-size: 20px;
+	text-align: right;
+	line-height: 35px;
+}
+.page02 .page02-right {
+	position: absolute;
+	top: 90px;
+	right: 200px;
+}
+
+/*page03*/
+.page03 {
+	min-height: 600px;
+	background-color: #b7e9de;
+	position: relative;
+}
+.page03 .page03-left {
+	position: absolute;
+	top: 170px;
+	right: 200px;
+}
+.page03 .page03-left .title {
+	width: 72px;
+	height: 73px;
+	background: url("images/title_bg1.png") no-repeat;
+	text-align: center;
+	opacity: 0;
+}
+.current .page03 .page03-left .title {
+	opacity: 1;
+	animation: page03_title 1s linear both;
+}
+.page03 .page03-left .title span {
+	color: #fff;
+	font-size: 50px;
+	font-weight: 100;
+}
+.page03 .page03-left h1 {
+	height: 73px;
+	display: inline-block;
+	color: #009799;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page03 .page03-left h1 {
+	opacity: 1;
+	animation: page03_h1 1s linear both 0.5s;
+}
+.page03 .page03-left .line {
+	width: 100%;
+	height: 1px;
+	background: #009799;
+	clear: both;
+	opacity: 0;
+}
+.current .page03 .page03-left .line {
+	opacity: 1;
+	animation: page03_line 1s linear both;
+}
+.page03 .page03-left h3 {
+	font-size: 26px;
+	color:#009799;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page03 .page03-left h3 {
+	opacity: 1;
+	animation: page03_h3 1s linear both;
+}
+.page03 .page03-left .text {
+	margin-top: 70px;
+	opacity: 0;
+}
+.current .page03 .page03-left .text {
+	opacity: 1;
+	animation: page03_text 1s linear both;
+}
+.page03 .page03-left .text p {
+	color: #e38ca6;
+	font-weight: lighter;
+	font-size: 20px;
+	text-align: right;
+	line-height: 35px;
+}
+.page03 .page03-right {
+	position: absolute;
+	top: 90px;
+	left: 210px;
+}
+
+/*page04*/
+.page04 {
+	width: 100%;
+	min-height: 600px;
+	background-color: #FFBA85;
+	position: relative;
+}
+.page04 .page04-left {
+	position: absolute;
+	top: 170px;
+	left: 210px;
+}
+.page04 .page04-left .title {
+	width: 72px;
+	height: 73px;
+	background: url("images/title_bg.png") no-repeat;
+	text-align: center;
+	opacity: 0;
+}
+.current .page04 .page04-left .title {
+	opacity: 1;
+	animation: page02_title 1s linear both;
+}
+.page04 .page04-left .title span {
+	color: #FFBA85;
+	font-size: 50px;
+	font-weight: 100;
+}
+.page04 .page04-left h1 {
+	height: 73px;
+	display: inline-block;
+	color: #fff;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page04 .page04-left h1 {
+	opacity: 1;
+	animation: page02_h1 1s linear both 0.5s; 
+}
+.page04 .page04-left .line {
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	clear: both;
+	opacity: 0;
+}
+.current .page04 .page04-left .line {
+	opacity: 1;
+	animation: page02_line 1s linear both;
+}
+.page04 .page04-left h3 {
+	font-size: 26px;
+	color: #fff;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page04 .page04-left h3 {
+	opacity: 1;
+	animation: page02_h3 1s linear both;
+}
+.page04 .page04-left .text {
+	margin-top: 70px;
+	opacity: 0;
+}
+.current .page04 .page04-left .text {
+	opacity: 1;
+	animation: page02_text 1s linear both;
+}
+.page04 .page04-left .text p {
+	color: #D8EBB1;
+	font-weight: lighter;
+	font-size: 20px;
+	text-align: right;
+	line-height: 35px;
+}
+.page04 .page04-right {
+	position: absolute;
+	top: 90px;
+	right: 200px;
+}
+
+/*page05*/
+.page05 {
+	min-height: 600px;
+	background-color: #99C6D9;
+	position: relative;
+}
+.page05 .page05-left {
+	position: absolute;
+	top: 190px;
+	right: 170px;
+}
+.page05 .page05-left .title {
+	width: 72px;
+	height: 73px;
+	background: url("images/title_bg1.png") no-repeat;
+	text-align: center;
+	opacity: 0;
+}
+.current .page05 .page05-left .title {
+	opacity: 1;
+	animation: page03_title 1s linear both;
+}
+.page05 .page05-left .title span {
+	color: #fff;
+	font-size: 50px;
+	font-weight: 100;
+}
+.page05 .page05-left h1 {
+	height: 73px;
+	display: inline-block;
+	color: #009799;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page05 .page05-left h1 {
+	opacity: 1;
+	animation: page03_h1 1s linear both 0.5s; 
+}
+.page05 .page05-left .line {
+	width: 100%;
+	height: 1px;
+	background: #009799;
+	clear: both;
+	opacity: 0;
+}
+.current .page05 .page05-left .line {
+	opacity: 1;
+	animation: page03_line 1s linear both;
+}
+.page05 .page05-left h3 {
+	font-size: 26px;
+	color:#009799;
+	font-weight: lighter;
+	opacity: 0;
+}
+.current .page05 .page05-left h3 {
+	opacity: 1;
+	animation: page03_h3 1s linear both;
+}
+.page05 .page05-left .text {
+	margin-top: 70px;
+	opacity: 0;
+}
+.current .page05 .page05-left .text {
+	opacity: 1;
+	animation: page03_text 1s linear both;
+}
+.page05 .page05-left .text p {
+	color: #e38ca6;
+	font-weight: lighter;
+	font-size: 20px;
+	text-align: right;
+	line-height: 35px;
+}
+.page05 .page05-right {
+	position: absolute;
+	top: 90px;
+	left: 210px;
+}
+
+/*导航开始*/
+.nav-list {
+	width: 20px;
+	height: 100px;
+	position: fixed;
+	top: 40%;
+	right: 20px;
+}
+.nav-list li {
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid #fff;
+	border-color: transparent;
+	margin-bottom: 5px;
+	opacity: 0.6
+}
+.nav-list li:hover {
+	animation: nav-list 0.5s linear  both;
+}
+.nav-list .cur  {
+	border: 1px solid #fff;
+	opacity: 1;
+}
+.nav-list li span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	line-height: 20px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 5px auto;
+}
+.wrap {
+	transition: all 1s;
+}
+#p1:target {
+	animation: scroll1 2s ease-out both;
+}
+#p2:target {
+	animation: scroll 2s ease-out both;
+}
+#p3:target {
+	animation: scroll 2s ease-out both;
+}
+#p4:target {
+	animation: scroll 2s ease-out both;
+}
+#p5:target {
+	animation: scroll 2s ease-out both;
+}
